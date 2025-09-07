@@ -1,0 +1,24 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* colors */
+$graphite: #1c1c1c;
+$fresh-green: #9fe870;
+$light-caramel: #c68a64;
+$rusty-brown: #7b3f00;
+$soft-beige: #d9d9d9;
+$warm-sand: #d1a973;
+
+#header_wrap {
+  background-color: $light-caramel;
+}
+
+#main_content_wrap {
+  background-color: $warm-sand;
+}
+
+#footer_wrap {
+  background-color: $soft-beige
+}
