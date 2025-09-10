@@ -13,13 +13,14 @@ $warm-sand: #d1a973;
 #header_wrap {
   background: $warm-sand;
   position: relative;
+  text-align: center;
   .inner {
     display: inline-block;
     padding: 10px;
     position: relative;
     text-align: center;
     .content {
-      background: url(assets/images/termite-sq-1000x1000.png) no-repeat left center;
+      background: url("/assets/images/termite-sq-1000x1000.png") no-repeat left center;
       background-size: 120px;
       display: inline-block;
       padding-left: 120px;
