@@ -12,6 +12,17 @@ $warm-sand: #d1a973;
 
 #header_wrap {
   background: $warm-sand;
+  .inner {
+    align-items: center;
+    display: flex;
+    padding: 10px;
+  }
+}
+
+#project_icon {
+  height: 120px;
+  margin-right: 16px;
+  width: 120px;
 }
 
 #project_title {
@@ -21,6 +32,7 @@ $warm-sand: #d1a973;
 
 #project_tagline {
   color: $rusty-brown;
+  margin-bottom: 0px;
   text-shadow: none;
 }
 
@@ -32,6 +44,7 @@ $warm-sand: #d1a973;
     display: flex;
     flex-direction: row;
     list-style: none;
+    margin-bottom: 0px;
     .action {
       padding: 6px 12px;
       &:hover {

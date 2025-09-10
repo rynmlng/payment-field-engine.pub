@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Engineering Payment Fields Outside The US
+title: Payment Field Engine
 email: sudo@vigilandum.io
-description: Banking payment field generators for non-US institutions.
+description: Engineering Payment Fields Outside The US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "payment-field-engine.vigilandum.io"
 github_username: rynmlng
