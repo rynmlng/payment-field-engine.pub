@@ -79,6 +79,12 @@ $white: #ffffff;
       #api_form {
         background: none;
         padding: 0;
+        input {
+          border-radius: 10px;
+          border-width: 1px;
+          font-size: 16px;
+          padding: 12px 16px;
+        }
         label {
           display: block;
           font-size: 14px;
