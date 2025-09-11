@@ -16,14 +16,14 @@ $warm-sand: #d1a973;
   text-align: center;
   .inner {
     display: inline-block;
-    padding: 10px;
+    padding: 0px;
     position: relative;
     text-align: center;
     .content {
       background: url("/assets/images/termite-sq-1000x1000.png") no-repeat left center;
       background-size: 120px;
       display: inline-block;
-      padding-left: 120px;
+      padding: 10px 0px 10px 120px;
       text-align: left;
     }
   }
