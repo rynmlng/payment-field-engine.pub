@@ -7,6 +7,18 @@
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/termite-sq-48x48-wh.png">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/parsley.min.js" type="text/javascript"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        $("#api-form").parsley();
+      });
+
+      document.getElementById("#api-form").onsubmit = async function(e) {
+        e.preventDefault();
+        // TODO Gather data and post to your endpoint or API
+      };
+    </script>
 
 {% seo %}
     {% include head-custom.html %}

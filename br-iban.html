@@ -4,4 +4,34 @@ title: Brazil IBAN
 permalink: /br-iban/
 ---
 
-Hola
+<h1>BRAZIL IBAN</h1>
+<p>Generate an IBAN for the country Brazil using common banking fields.</p>
+<form id="api-form">
+  <div>
+    <label for="bank-code">Enter a bank code</label>
+    <input placeholder="###" type="number" id="bank-code" min="1" max="999" name="bank-code" required>
+  </div>
+  <div>
+    <label for="branch-code">Enter a branch code</label>
+    <input placeholder="#####" type="number" id="branch-code" min="1" max="99999" name="branch-code" required>
+  </div>
+  <div>
+    <label for="account-number">Enter an account number</label>
+    <input placeholder="##########" type="text" id="account-number" min="1" max="9999999999" name="account-number" required>
+  </div>
+  <div>
+    <label for="account-type">Enter the account type</label>
+    <select id="account-type" name="account-type">
+      <option value="checking">Checking</option>
+      <option value="savings">Savings</option>
+    </select>
+  </div>
+  <div>
+    <label for="account-owner-position">Enter the account holder's position</label>
+    <select id="account-owner-position" name="account-owner-position">
+      <option value="1">Primary</option>
+      <option value="2">Secondary</option>
+    </select>
+  </div>
+  <button type="submit">Generate</button>
+</form>
