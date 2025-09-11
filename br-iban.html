@@ -10,8 +10,8 @@ permalink: /br-iban/
   <form id="api_form" data-parsley-validate novalidate>
     <div>
       <label for="bank_code">Enter a bank code</label>
-      <input placeholder="###" type="text" id="bank_code" maxlength="3" pattern="\d{1,3}" name="bank_code" data-parsley-type="digits" data-parsley-length="[1,3]" data-parsley-length-message="Must be 1-3 digits" required>
-      <ul class="parsley-errors-list"></ul>
+      <input placeholder="###" type="text" id="bank_code" maxlength="3" pattern="\d{1,3}" name="bank_code" data-parsley-type="digits" data-parsley-length="[1,3]" data-parsley-length-message="Must be 1-3 digits" data-parsley-errors-container="#bank_code_errors" required>
+      <ul class="parsley-errors-list" id="bank_code_errors"></ul>
     </div>
     <div>
       <label for="branch_code">Enter a branch code</label>
