@@ -9,6 +9,7 @@ $light-caramel: #c68a64;
 $rusty-brown: #7b3f00;
 $soft-beige: #d9d9d9;
 $warm-sand: #d1a973;
+$white: #ffffff;
 
 #header_wrap {
   background: $warm-sand;
@@ -63,6 +64,24 @@ $warm-sand: #d1a973;
 #main_content_wrap {
   background: $warm-sand;
   border: none;
+  #main_content {
+    color: $rusty-brown;
+    text-align: center;
+    .form_wrapper {
+      background-color: $white;
+      border-radius: 40px;
+      max-width: 480px;
+      padding: 20px 40px;
+      #api_form {
+        background: none;
+        padding: 0;
+        label {
+          font-size: 14px;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  } 
 }
 
 #footer_wrap {
