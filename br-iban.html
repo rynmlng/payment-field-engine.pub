@@ -9,15 +9,15 @@ permalink: /br-iban/
 <form id="api-form">
   <div>
     <label for="bank-code">Enter a bank code</label>
-    <input placeholder="###" type="number" id="bank-code" min="1" max="999" name="bank-code" required>
+    <input placeholder="###" type="text" id="bank-code" maxlength="3" pattern="\d{1,3}" name="bank-code" data-parsley-type="digits" data-parsley-length="[1,3]" data-parsley-length-message="Must be 1-3 digits" required>
   </div>
   <div>
     <label for="branch-code">Enter a branch code</label>
-    <input placeholder="#####" type="number" id="branch-code" min="1" max="99999" name="branch-code" required>
+    <input placeholder="#####" type="text" id="branch-code" maxlength="5" pattern="\d{1,5}" name="branch-code" data-parsley-type="digits" data-parsley="[1,5]" data-parsley-length-message="Must be 1-5 digits" required>
   </div>
   <div>
     <label for="account-number">Enter an account number</label>
-    <input placeholder="##########" type="text" id="account-number" min="1" max="9999999999" name="account-number" required>
+    <input placeholder="##########" type="text" id="account-number" maxlength="10" pattern="\d{1,10}" name="account-number" data-parsley-type="digits" data-parsley="[1,10]" data-parsley-length-message="Must be 1-10 digits" required>
   </div>
   <div>
     <label for="account-type">Enter the account type</label>
