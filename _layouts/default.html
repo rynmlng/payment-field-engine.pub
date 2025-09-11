@@ -11,14 +11,14 @@
     <script src="/assets/js/jquery-3.7.1.min.js" type="text/javascript"></script>
     <script src="/assets/js/parsley.min.js" type="text/javascript"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      $(function() {
         $("#api_form").parsley();
-      });
 
-      document.getElementById("#api_form").onsubmit = async function(e) {
-        e.preventDefault();
-        // TODO Gather data and post to your endpoint or API
-      };
+        $("#api_form").submit(function(e) {
+          e.preventDefault();
+          // TODO Gather data and post to your endpoint or API
+        });
+      });
     </script>
 
 {% seo %}

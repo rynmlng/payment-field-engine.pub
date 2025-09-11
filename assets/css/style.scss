@@ -67,15 +67,20 @@ $white: #ffffff;
   #main_content {
     color: $rusty-brown;
     text-align: center;
+    #main_title {
+      color: $rusty-brown;
+    }
     .form_wrapper {
       background-color: $white;
       border-radius: 40px;
+      margin: 0 auto;
       max-width: 480px;
       padding: 20px 40px;
       #api_form {
         background: none;
         padding: 0;
         label {
+          display: block;
           font-size: 14px;
           margin-bottom: 4px;
         }
