@@ -83,6 +83,7 @@ $white: #ffffff;
         text-align: left;
         .parsley-errors-list {
           color: $dark-red;
+          height: 1em;
           list-style: none;
           padding: 0;
         }
