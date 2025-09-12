@@ -16,12 +16,12 @@ permalink: /br-iban/
     <div>
       <label for="branch_code">Enter a branch code</label>
       <input placeholder="#####" type="text" id="branch_code" maxlength="5" pattern="\d{1,5}" name="branch_code" data-parsley-type="digits" data-parsley="[1,5]" data-parsley-length-message="Must be 1-5 digits" data-parsley-errors-container="#branch_code_errors" required />
-      <div class="parsley_errors_wrapper" id="branch_code_errors"></div>
+      <div class="parsley_error_wrapper" id="branch_code_errors"></div>
     </div>
     <div>
       <label for="account_number">Enter an account number</label>
       <input placeholder="##########" type="text" id="account_number" maxlength="10" pattern="\d{1,10}" name="account_number" data-parsley-type="digits" data-parsley="[1,10]" data-parsley-length-message="Must be 1-10 digits" data-parsley-errors-container="#account_number_errors" required />
-      <div class="parsley_errors_wrapper" id="account_number_errors"></div>
+      <div class="parsley_error_wrapper" id="account_number_errors"></div>
     </div>
     <div>
       <label for="account_type">Enter the account type</label>

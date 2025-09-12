@@ -3,6 +3,9 @@
 
 @import "{{ site.theme }}";
 
+/* bootstrap overrides */
+$caret-spacing: 1em;
+
 /* colors */
 $brown-sugar: #a66f47;
 $dark-red: #b00020;
