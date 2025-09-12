@@ -81,11 +81,14 @@ $white: #ffffff;
         background: none;
         padding: 0;
         text-align: left;
-        .parsley-errors-list {
+        .parsley_errors_container {
           color: $dark-red;
           height: 1em;
-          list-style: none;
-          padding: 0;
+          margin-bottom: 2em;
+          .parsley-errors-list {
+            list-style: none;
+            padding: 0;
+          }
         }
         button, input, select {
           border-radius: 10px;
