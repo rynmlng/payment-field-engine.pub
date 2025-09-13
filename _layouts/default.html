@@ -40,6 +40,12 @@
             },
             error: function(xhr, status, error) {
               let response_json;
+
+              console.log(xhr.responseText);  // XXX
+              console.log(error);  // XXX
+              console.log(status);  // XXX
+              console.log(JSON.parse(xhr.responseText));  // XXX
+
               try {
                 response_json = JSON.parse(xhr.responseText);
               } catch(e) {
