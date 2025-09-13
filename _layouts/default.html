@@ -17,22 +17,33 @@
         $("#api_form").submit(function(e) {
           e.preventDefault();
 
-            $.ajax({
-              type: "POST",
-              url: "https://api.vigilandum.io/payment-field-engine",
-              data: $(this).serialize(),
-              success: function(response) {
-                const label = Object.keys(response)[0];
-                const value = response[label];
+          const top_level_fields = ["country_code", "payment_field"];
+          var post_data = {params: {}};
 
-                $("#result").removeClass("error").text(label + ":  " + value);
-              },
-              error: function(xhr, status, error) {
-                $("#result").addClass("error").text("Error:  " + error);
-              }
-            });
+          for (const element of $(this).serializeArray()) {
+            if (top_level_fields.includes(element.name)) {
+              post_data[element.name] = element.value;
+            } else {
+              post_data.params[element.name] = element.value;
+            }
+          }
+
+          $.ajax({
+            type: "POST",
+            url: "https://api.vigilandum.io/payment-field-engine",
+            data: post_data,
+            success: function(response) {
+              const label = Object.keys(response)[0];
+              const value = response[label];
+
+              $("#result").removeClass("error").text(label + ":  " + value);
+            },
+            error: function(xhr, status, error) {
+              $("#result").addClass("error").text("Error:  " + error);
+            }
           });
         });
+      });
     </script>
 
 {% seo %}
