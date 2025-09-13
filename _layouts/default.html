@@ -34,6 +34,9 @@
             data: JSON.stringify(post_data),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
+            xhrFields: {
+              withCredentials: false
+            },
             success: function(response) {
               const label = Object.keys(response)[0];
               const value = response[label];
