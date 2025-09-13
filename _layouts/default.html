@@ -39,11 +39,15 @@
               $("#result").removeClass("error").text(label + ":  " + value);
             },
             error: function(xhr, status, error) {
+              console.log(status);
+              console.log(error);
               $("#result").addClass("error").text("Error:  " + error);
+            },
+            complete: function(xhr, status) {
+              $("#result").show();
             }
           });
 
-          $(this).show();
         });
       });
     </script>
