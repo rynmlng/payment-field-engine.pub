@@ -18,7 +18,7 @@
           e.preventDefault();
 
           const top_level_fields = ["country_code", "payment_field"];
-          var post_data = {params: {}};
+          let post_data = {params: {}};
 
           for (const element of $(this).serializeArray()) {
             if (top_level_fields.includes(element.name)) {
@@ -39,9 +39,15 @@
               $("#result").removeClass("error").text(label + ":  " + value);
             },
             error: function(xhr, status, error) {
-              console.log(status);
-              console.log(error);
-              $("#result").addClass("error").text("Error:  " + error);
+              let response_json;
+              try {
+                response_json = JSON.parse(xhr.responseText);
+              } catch(e) {
+                response_json = {};
+              }
+              const error_message = response_json.body || 'Unknown error';
+
+              $("#result").addClass("error").text("Error:  " + error_message);
             },
             complete: function(xhr, status) {
               $("#result").show();
