@@ -16,9 +16,22 @@
 
         $("#api_form").submit(function(e) {
           e.preventDefault();
-          // TODO Gather data and post to your endpoint or API
+
+            $.ajax({
+              type: "POST",
+              url: "https://api.vigilandum.io/payment-field-engine",
+              data: $(this).serialize(),
+              success: function(response) {
+                const label = Object.keys(response)[0];
+                const value = response[label];
+
+                $("#result").removeClass("error").text(label + ":  " + value);
+              },
+              error: function(xhr, status, error) {
+                $("#result").addClass("error").text("Error:  " + error);
+              }
+            });
         });
-      });
     </script>
 
 {% seo %}
