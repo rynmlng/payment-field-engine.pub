@@ -28,15 +28,15 @@
             }
           }
 
+          console.log("POST Data: "+post_data);
+
           $.ajax({
             type: "POST",
             url: "https://api.vigilandum.io/payment-field-engine",
+            contentType: "application/json",
+            crossDomain: true,
             data: JSON.stringify(post_data),
-            contentType: "application/json; charset=utf-8",
             dataType: "json",
-            xhrFields: {
-              withCredentials: false
-            },
             success: function(response) {
               const label = Object.keys(response)[0];
               const value = response[label];
@@ -46,10 +46,9 @@
             error: function(xhr, status, error) {
               let response_json;
 
-              console.log(xhr.responseText);  // XXX
-              console.log(error);  // XXX
-              console.log(status);  // XXX
-              console.log(JSON.parse(xhr.responseText));  // XXX
+              console.log("XHR Response: "+xhr.responseText);  // XXX
+              console.log("Error: "+error);  // XXX
+              console.log("Status: "+status);  // XXX
 
               try {
                 response_json = JSON.parse(xhr.responseText);
