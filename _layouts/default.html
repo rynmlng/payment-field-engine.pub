@@ -31,9 +31,7 @@
           $.ajax({
             type: "POST",
             url: "https://api.vigilandum.io/payment-field-engine",
-            data: JSON.stringify(post_data),
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
+            data: post_data,
             success: function(response) {
               const label = Object.keys(response)[0];
               const value = response[label];
