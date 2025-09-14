@@ -28,8 +28,6 @@
             }
           }
 
-          console.log("POST Data: "+JSON.stringify(post_data));
-
           $.ajax({
             type: "POST",
             url: "https://api.vigilandum.io/payment-field-engine",
@@ -46,16 +44,12 @@
             error: function(xhr, status, error) {
               let response_json;
 
-              console.log("XHR Response: "+xhr.responseText);  // XXX
-              console.log("Error: "+error);  // XXX
-              console.log("Status: "+status);  // XXX
-
               try {
                 response_json = JSON.parse(xhr.responseText);
               } catch(e) {
                 response_json = {};
               }
-              const error_message = response_json.body || 'Unknown error';
+              const error_message = response_json.error || 'Unknown error';
 
               $("#result").addClass("error").text("Error:  " + error_message);
             },
