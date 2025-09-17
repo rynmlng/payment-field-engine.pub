@@ -15,7 +15,7 @@ layout: default
       <input placeholder="{{field.placeholder}}" type="text" id="{{field.name}}" maxlength="{{field.max_length}}" pattern="{{field.pattern}}" name="{{field.name}}" data-parsley-type="{{field.parsley_type}}" data-parsley-length="{{field.parsley_length}}" data-parsley-length-message="{{field.parsley_length_message}}" data-parsley-errors-container="#{{field.name}}_errors" required />
       {% when "select" %}
       <select id="{{field.name}}" name="{{field.name}}">
-        {% for option in options %}
+        {% for option in field.options %}
         <option value="{{option.value}}">{{option.label}}</option>
         {% endfor %}
       </select>
