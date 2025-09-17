@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<h1 id="main_title">{{ page.title }}</h1>
+<p id="main_tagline">{{ page.tagline }}</p>
+<div class="form_wrapper">
+  <h3 id="form_title">{{ page.form_title }}</h3>
+  <form id="api_form" data-parsley-validate novalidate>
+    {% for field in fields %}
+    <div>
+      <label for="{{field.name}}">{{field.label}}</label>
+      {% case field.type %}
+      {% when "text" %}
+      <input placeholder="{{field.placeholder}}" type="text" id="{{field.name}}" maxlength="{{field.max_length}}" pattern="{{field.pattern}}" name="{{field.name}}" data-parsley-type="{{field.parsley_type}}" data-parsley-length="{{field.parsley_length}" data-parsley-length-message="{{field.parsley_length_message}}" data-parsley-errors-container="#{{field.name}}_errors" required />
+      {% when "select" %}
+      <select id="{{field.name}}" name="{{field.name}}">
+        {% for option in options %}
+        <option value="{{option.value}}">{{option.label}}</option>
+        {% endfor %}
+      </select>
+      {% endcase %}
+      <div class="parsley_error_wrapper" id="{{field.name}}_errors"></div>
+    </div>
+    {% endfor %}
+    <input name="country_code" type="hidden" value="{{ page.country_code }}"/>
+    <input name="payment_field" type="hidden" value="{{ page.payment_field }}"/>
+    <button type="submit">Generate</button>
+  </form>
+  <div id="result"></div>
+</div>
