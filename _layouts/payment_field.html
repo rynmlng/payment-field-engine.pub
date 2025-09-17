@@ -7,7 +7,7 @@ layout: default
 <div class="form_wrapper">
   <h3 id="form_title">{{ page.form_title }}</h3>
   <form id="api_form" data-parsley-validate novalidate>
-    {% for field in fields %}
+    {% for field in page.fields %}
     <div>
       <label for="{{field.name}}">{{field.label}}</label>
       {% case field.type %}
