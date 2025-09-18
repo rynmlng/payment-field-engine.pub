@@ -11,6 +11,7 @@ permalink: /mx-clabe/
 fields:
   - name: bank_code
     label: Enter a bank code
+    max_length: 3
     parsley_length: '[3,3]'
     parsley_length_message: 'Must be 3 digits'
     parsley_type: digits
@@ -19,6 +20,7 @@ fields:
     type: text
   - name: branch_code
     label: Enter a branch code
+    max_length: 3
     parsley_length: '[3,3]'
     parsley_length_message: 'Must be 3 digits'
     parsley_type: digits
@@ -27,6 +29,7 @@ fields:
     type: text
   - name: account_number
     label: Enter an account number
+    max_length: 11
     parsley_length: '[11,11]'
     parsley_length_message: 'Must be 11 digits'
     parsley_type: digits
