@@ -1,0 +1,36 @@
+---
+layout: payment_field
+title: Mexico CLABE
+tagline: Provide common banking fields for a bank account in Mexico and we can generate a CLABE for you.
+
+country_code: MX
+payment_field: CLABE
+form_title: Generate a Mexican CLABE
+permalink: /mx-clabe/
+
+fields:
+  - name: bank_code
+    label: Enter a bank code
+    parsley_length: '[3,3]'
+    parsley_length_message: 'Must be 3 digits'
+    parsley_type: digits
+    pattern: '\d{3}'
+    placeholder: '###'
+    type: text
+  - name: branch_code
+    label: Enter a branch code
+    parsley_length: '[3,3]'
+    parsley_length_message: 'Must be 3 digits'
+    parsley_type: digits
+    pattern: '\d{3}'
+    placeholder: '###'
+    type: text
+  - name: account_number
+    label: Enter an account number
+    parsley_length: '[11,11]'
+    parsley_length_message: 'Must be 11 digits'
+    parsley_type: digits
+    pattern: '\d{11}'
+    placeholder: '###########'
+    type: text
+---
