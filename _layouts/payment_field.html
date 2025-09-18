@@ -13,6 +13,7 @@ layout: default
       {% case field.type %}
       {% when "text" %}
       <input placeholder="{{field.placeholder}}" type="text" id="{{field.name}}" maxlength="{{field.max_length}}" pattern="{{field.pattern}}" name="{{field.name}}" data-parsley-type="{{field.parsley_type}}" data-parsley-length="{{field.parsley_length}}" data-parsley-length-message="{{field.parsley_length_message}}" data-parsley-errors-container="#{{field.name}}_errors" required />
+      <div class="parsley_error_wrapper" id="{{field.name}}_errors"></div>
       {% when "select" %}
       <select id="{{field.name}}" name="{{field.name}}">
         {% for option in field.options %}
@@ -20,7 +21,6 @@ layout: default
         {% endfor %}
       </select>
       {% endcase %}
-      <div class="parsley_error_wrapper" id="{{field.name}}_errors"></div>
     </div>
     {% endfor %}
     <input name="country_code" type="hidden" value="{{ page.country_code }}"/>
