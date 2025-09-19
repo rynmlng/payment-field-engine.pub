@@ -10,32 +10,32 @@ permalink: /br-iban/
 
 fields:
   - name: bank_code
+    type: text
     label: Enter a bank code
     max_length: 3
     parsley_length: '[1,3]'
-    parsley_length_message: 'Must be 1-3 digits'
     parsley_type: digits
     pattern: '\d{1,3}'
     placeholder: '###'
-    type: text
+    validation_error_message: 'Must be 1-3 digits.'
   - name: branch_code
+    type: text
     label: Enter a branch code
     max_length: 5
     parsley_length: '[1,5]'
-    parsley_length_message: 'Must be 1-5 digits'
     parsley_type: digits
     pattern: '\d{1,5}'
     placeholder: '#####'
-    type: text
+    validation_error_message: 'Must be 1-5 digits.'
   - name: account_number
+    type: text
     label: Enter an account number
     max_length: 10
     parsley_length: '[1,10]'
-    parsley_length_message: 'Must be 1-10 digits'
     parsley_type: digits
     pattern: '\d{1,10}'
     placeholder: '##########'
-    type: text
+    validation_error_message: 'Must be 1-10 digits.'
   - name: account_type
     label: Enter the account type
     options:

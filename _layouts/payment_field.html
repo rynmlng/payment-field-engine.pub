@@ -12,7 +12,7 @@ layout: default
       <label for="{{field.name}}">{{field.label}}</label>
       {% case field.type %}
       {% when "text" %}
-      <input placeholder="{{field.placeholder}}" type="text" id="{{field.name}}" maxlength="{{field.max_length}}" pattern="{{field.pattern}}" name="{{field.name}}" data-parsley-type="{{field.parsley_type}}" data-parsley-length="{{field.parsley_length}}" data-parsley-length-message="{{field.parsley_length_message}}" data-parsley-errors-container="#{{field.name}}_errors" required />
+      <input placeholder="{{field.placeholder}}" type="text" id="{{field.name}}" maxlength="{{field.max_length}}" pattern="{{field.pattern}}" name="{{field.name}}" data-parsley-type="{{field.parsley_type}}" data-parsley-length="{{field.parsley_length}}" data-parsley-pattern-message="{{field.validation_error_message}}" data-parsley-errors-container="#{{field.name}}_errors" required />
       <div class="parsley_error_wrapper" id="{{field.name}}_errors"></div>
       {% when "select" %}
       <select id="{{field.name}}" name="{{field.name}}">
