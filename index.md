@@ -1,5 +1,6 @@
 ---
 layout: default
+description: Generate and understand international payment fields such as CLABE, IBAN, and more. Easy tools to create valid banking codes for global payments.
 ---
 
-Payment fields outside the US are confusing, seemingly random, yet surprisingly deterministic. This site will serve as a guide to be able to understand and generate those fields for you. Provider the inputs and the output will unblock you from processing payments.
+International payment fields can seem confusing and random, but they follow precise, deterministic rules. This site helps you understand and generate these fields easily. Provide common banking inputs, and our tools will generate valid payment identifiers to unblock your global payment processing.
