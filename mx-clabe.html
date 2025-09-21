@@ -1,7 +1,7 @@
 ---
 layout: payment_field
-title: How To Generate A Mexico CLABE Number
-description: Generate a valid Mexico CLABE number by entering your bank code, branch code, and account number. Our tool ensures your CLABE is accurate for secure Mexican bank transactions.
+title: CLABE Bank Account Number Generator
+description: Instantly generate a valid CLABE for Mexican bank transfers by entering your bank code, branch code, and account number. Our tool ensures your CLABE is accurate for secure Mexican bank transactions.
 
 country_code: MX
 payment_field: CLABE
@@ -36,4 +36,12 @@ fields:
     pattern: '\d{11}'
     placeholder: '###########'
     validation_error_message: 'Must be 11 digits.'
+
+faq_questions:
+  - question: 'What is a CLABE?'
+    answer: 'A CLABE is an 18 digit bank account number used in Mexico.'
+  - question: 'What does CLABE stand for?'
+    answer: 'Clave Bancaria Etandarizada (Standardized Banking Key)'
+  - question: 'When would I need to generate a CLABE?'
+    answer: 'If the payment processor you are working with requires a CLABE and you have other fields (account number, bank code, branch code) for the receiving bank account.'
 ---

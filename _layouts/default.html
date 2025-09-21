@@ -10,6 +10,26 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="/assets/js/jquery-3.7.1.min.js" type="text/javascript"></script>
     <script src="/assets/js/parsley.min.js" type="text/javascript"></script>
+    {% if page.faq_questions %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {% for item in page.faq_questions %}
+          {
+            "@type": "Question",
+            "name": "{{ item.question | escape }}",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "{{ item.answer | escape }}"
+            }
+          }{% if forloop.last == false %},{% endif %}
+          {% endfor %}
+        ]
+      }
+    </script>
+    {% endif %}
     <script>
       $(function() {
         $("#api_form").parsley();
