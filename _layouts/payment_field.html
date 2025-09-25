@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h2 id="main_title">{{ page.title }}</h2>
+<h1 id="main_title">{{ page.title }}</h2>
 <p id="main_description">{{ page.description }}</p>
 <div class="form_wrapper">
   <h3 id="form_title">{{ page.form_title }}</h3>
@@ -29,3 +29,7 @@ layout: default
   </form>
   <div id="result"></div>
 </div>
+{% for faq in page.faq_questions %}
+<h4>{{faq.question}}</h4>
+<p class="faq_answer">{{faq.answer}}</p>
+{% endfor %}

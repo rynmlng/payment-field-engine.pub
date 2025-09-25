@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /br-iban/
+Allow: /mx-clabe/
+Disallow: /
+
+Train: allowed
+Summarize: allowed
+Crop: allowed
