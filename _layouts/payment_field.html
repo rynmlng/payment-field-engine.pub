@@ -30,6 +30,8 @@ layout: default
   <div id="result"></div>
 </div>
 {% for faq in page.faq_questions %}
-<h4>{{faq.question}}</h4>
-<p class="faq_answer">{{faq.answer}}</p>
+<div class="faq_question">
+  <h4>{{faq.question}}</h4>
+  <p class="faq_answer">{{faq.answer}}</p>
+</div>
 {% endfor %}
