@@ -114,7 +114,7 @@ h4 {
       display: inline-block;
       margin-top: 0px;
     }
-    .form_wrapper {
+    #generator {
       background-color: $white;
       border-radius: 40px;
       margin: 50px auto;
@@ -164,6 +164,7 @@ h4 {
       }
       #form_title {
         color: $eerie-black;
+        font-size: 32px;
         margin: 21px 0;
       }
       #result {
@@ -180,7 +181,12 @@ h4 {
         }
       }
     }
+    .faq_question {
+      color: $rusty-brown;
+      font-size: 21px;
+    }
     .faq_answer {
+      color: $rusty-brown;
       margin-bottom: 30px;
     }
   } 

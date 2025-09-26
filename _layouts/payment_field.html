@@ -4,8 +4,8 @@ layout: default
 
 <h1 id="main_title">{{ page.title }}</h2>
 <p id="main_description">{{ page.description }}</p>
-<div class="form_wrapper">
-  <h3 id="form_title">{{ page.form_title }}</h3>
+<section id="generator">
+  <h2 id="form_title">{{ page.form_title }}</h2>
   <form id="api_form" data-parsley-validate novalidate>
     {% for field in page.fields %}
     <div>
@@ -28,10 +28,12 @@ layout: default
     <button type="submit">Generate</button>
   </form>
   <div id="result"></div>
-</div>
-{% for faq in page.faq_questions %}
-<div class="faq_question">
-  <h4>{{faq.question}}</h4>
-  <p class="faq_answer">{{faq.answer}}</p>
-</div>
-{% endfor %}
+</section>
+<section id="faq">
+  {% for faq in page.faq_questions %}
+  <div>
+    <h3 class="faq_question">{{faq.question}}</h3>
+    <p class="faq_answer">{{faq.answer}}</p>
+  </div>
+  {% endfor %}
+</section>
