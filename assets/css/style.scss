@@ -19,7 +19,7 @@ $white: #ffffff;
 
 /* overrides */
 body {
-  background-color: $soft-beige;
+  background-color: $warm-sand;
   color: $graphite;
 }
 
@@ -115,107 +115,104 @@ ul {
   }
 }
 
-#main_content_wrap {
+#main_content {
   background: $warm-sand;
-  border: none;
-  #main_content {
+  color: $rusty-brown;
+  padding: 40px 10px;
+  text-align: center;
+  a {
+    transition: color 0.5s ease;
+    &:focus, &:hover {
+      color: $dark-red;
+    }
+  }
+  #main_description {
+    margin: 20px 0 0 0;
+  }
+  #main_title {
     color: $rusty-brown;
-    padding: 40px 10px;
-    text-align: center;
-    a {
-      transition: color 0.5s ease;
-      &:focus, &:hover {
+    display: inline-block;
+    margin-top: 0px;
+  }
+  #generator {
+    background-color: $white;
+    border-radius: 40px;
+    margin: 50px auto;
+    max-width: 480px;
+    padding: 20px 40px 41px;
+    #api_form {
+      background: none;
+      padding: 0;
+      text-align: left;
+      .parsley_error_wrapper {
+        color: $dark-red;
+        font-size: 14px;
+        height: 14px;
+        margin-bottom: 21px;
+        .parsley-errors-list {
+          list-style: none;
+          margin-bottom: 0;
+          padding: 0;
+        }
+      }
+      button, input, select {
+        border-radius: 10px;
+        border-width: 1px;
+        font-size: 16px;
+        padding: 12px 16px;
+        width: 100%;
+      }
+      button {
+        background-color: $light-caramel;
+        border: none;
+        border-radius: 24px;
+        color: $eerie-black;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out;
+        &:hover, &:focus {
+          background-color: $brown-sugar;
+        }
+      }
+      select {
+        margin-bottom: 35px;
+      }
+      label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+    }
+    #form_title {
+      color: $eerie-black;
+      font-size: 32px;
+      margin: 21px 0;
+    }
+    #result {
+      background-color: $warm-sand;
+      border-radius: 10px;
+      color: $rusty-brown;
+      display: none;
+      font-weight: bold;
+      margin-top: 35px;
+      padding: 12px;
+      white-space: pre;
+      &.error {
         color: $dark-red;
       }
     }
-    #main_description {
-      margin: 20px 0 0 0;
-    }
-    #main_title {
+  }
+  #faq {
+    text-align: left;
+    .faq_question {
       color: $rusty-brown;
-      display: inline-block;
-      margin-top: 0px;
+      font-size: 21px;
+      margin-top: 40px;
     }
-    #generator {
-      background-color: $white;
-      border-radius: 40px;
-      margin: 50px auto;
-      max-width: 480px;
-      padding: 20px 40px 41px;
-      #api_form {
-        background: none;
-        padding: 0;
-        text-align: left;
-        .parsley_error_wrapper {
-          color: $dark-red;
-          font-size: 14px;
-          height: 14px;
-          margin-bottom: 21px;
-          .parsley-errors-list {
-            list-style: none;
-            margin-bottom: 0;
-            padding: 0;
-          }
-        }
-        button, input, select {
-          border-radius: 10px;
-          border-width: 1px;
-          font-size: 16px;
-          padding: 12px 16px;
-          width: 100%;
-        }
-        button {
-          background-color: $light-caramel;
-          border: none;
-          border-radius: 24px;
-          color: $eerie-black;
-          font-weight: bold;
-          transition: background-color 0.3s ease-in-out;
-          &:hover, &:focus {
-            background-color: $brown-sugar;
-          }
-        }
-        select {
-          margin-bottom: 35px;
-        }
-        label {
-          display: block;
-          font-size: 14px;
-          margin-bottom: 4px;
-        }
-      }
-      #form_title {
-        color: $eerie-black;
-        font-size: 32px;
-        margin: 21px 0;
-      }
-      #result {
-        background-color: $warm-sand;
-        border-radius: 10px;
-        color: $rusty-brown;
-        display: none;
-        font-weight: bold;
-        margin-top: 35px;
-        padding: 12px;
-        white-space: pre;
-        &.error {
-          color: $dark-red;
-        }
-      }
+    .faq_answer {
+      color: $rusty-brown;
     }
-    #faq {
-      text-align: left;
-      .faq_question {
-        color: $rusty-brown;
-        font-size: 21px;
-        margin-top: 40px;
-      }
-      .faq_answer {
-        color: $rusty-brown;
-      }
-    }
-  } 
-}
+  }
+} 
 
 #footer_wrap {
   background: $soft-beige
@@ -238,5 +235,5 @@ ul {
     #project_tagline { font-size: 21px; }
   }
 
-  #main_content_wrap #main_content { padding-top: 20px; }
+  #main_content { padding-top: 20px; }
 }
