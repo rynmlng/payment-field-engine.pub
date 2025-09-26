@@ -52,3 +52,11 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  -
+    scope:
+      path: google3178d3f5806d363d.html
+    values:
+      sitemap: false
+
