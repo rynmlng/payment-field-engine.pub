@@ -205,13 +205,15 @@ ul {
   }
   #faq {
     text-align: left;
-    .faq_question {
-      color: $rusty-brown;
-      font-size: 21px;
-      margin-top: 40px;
-    }
-    .faq_answer {
-      color: $rusty-brown;
+    .faq_questions {
+      h2 {
+        color: $rusty-brown;
+        font-size: 21px;
+        margin-top: 40px;
+      }
+      p {
+        color: $rusty-brown;
+      }
     }
   }
 }

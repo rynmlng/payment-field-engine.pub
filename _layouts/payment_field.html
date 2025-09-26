@@ -30,9 +30,9 @@ layout: default
 </section>
 <section id="faq">
   {% for faq in page.faq_questions %}
-  <div>
-    <h2 class="faq_question">{{faq.question}}</h2>
-    <p class="faq_answer">{{faq.answer}}</p>
+  <div class="faq_questions">
+    <h2>{{faq.question}}</h2>
+    <p>{{faq.answer}}</p>
   </div>
   {% endfor %}
 </section>
