@@ -53,4 +53,17 @@ faq_questions:
     answer: 'You need to generate a CLABE if...<ul><li>You''re sending or receiving a cross-border electronic transfer to a Mexican bank account.</li><li>Your bank or payment provider requests a CLABE for processing a transaction.</li><li>You want to verify the accuracy of a recipient''s account before transferring funds.</li></ul>Use our <a href="/mx-clabe/">CLABE generator tool</a> to instantly create a verified CLABE bank account number.'
   - question: 'Where can I learn more about CLABEs?'
     answer: 'See <a href="https://www.supremacorte.gob.mx/sites/default/files/resoluciones/2024-06/CT-CI-A-8-2024.pdf" target="_blank">the official Mexican transparency regulation here.</a><br/><br/>You can also visit our <a href="/mx-clabe/">CLABE generator</a> page for step-by-step instructions and examples.'
+  - question: 'How can I integrate with your API directly?'
+    answer: |
+      Integrating directly with our API is straightforward and entirely open at this time. Here is a snippet of a sample web request you can make:
+      <pre>
+      GET https://payment-field-engine.vigilandum.io/mx-clabe/
+      {
+        "bank_code": "###",
+        "branch_code": "###",
+        "account_number": "###########",
+        "country_code": "MX",
+        "payment_field": "CLABE"
+      }
+      </pre>
 ---

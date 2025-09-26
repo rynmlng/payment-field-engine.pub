@@ -71,4 +71,19 @@ faq_questions:
     answer: 'You need to generate an IBAN for Brazil if...<ul><li>You''re sending or receiving a cross-border electronic transfer to a Brazilian bank account.</li><li>Your bank or payment provider requests an IBAN for processing a transaction.</li><li>You want to verify the accuracy of a recipient''s bank account before transferring funds.</li></ul>Use our <a href="/br-iban/">Brazil IBAN generator tool</a> to instantly create a verified IBAN.'
   - question: 'Where can I learn more about IBANs in Brazil?'
     answer: 'See the official Central Bank Of Brazil''s IBAN Implementation Guidelines <a href="https://www.bcb.gov.br/content/financialstability/paymentssystem_docs/IBAN-Guidelines_English.pdf">here.</a>'
+  - question: 'How can I integrate with your API directly?'
+    answer: |
+      Integrating directly with our API is straightforward and entirely open at this time. Here is a snippet of a sample web request you can make:
+      <pre>
+      GET https://payment-field-engine.vigilandum.io/br-iban/
+      {
+        "bank_code": "###",
+        "branch_code": "#####",
+        "account_number": "##########",
+        "account_type": "checking",
+        "account_owner_position": "1",
+        "country_code": "BR",
+        "payment_field": "IBAN"
+      }
+      </pre>
 ---
