@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/termite-sq-48x48-wh.png">
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <script src="/assets/js/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script src="/assets/js/parsley.min.js" type="text/javascript"></script>
+    <link rel="preload" href="/assets/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/bootstrap.min.css"></noscript>
+    <link rel="preload" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"></noscript>
+    <script src="/assets/js/jquery-3.7.1.min.js" type="text/javascript" defer></script>
+    <script src="/assets/js/parsley.min.js" type="text/javascript" defer></script>
     {% if page.how_to %}
     <script type="application/ld+json">
       {
@@ -119,7 +121,6 @@
         });
       });
     </script>
-
 {% seo %}
     {% include head-custom.html %}
   </head>
