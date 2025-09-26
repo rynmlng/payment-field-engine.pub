@@ -10,8 +10,8 @@
     <noscript><link rel="stylesheet" href="/assets/css/bootstrap.min.css"></noscript>
     <link rel="preload" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"></noscript>
-    <script src="/assets/js/jquery-3.7.1.min.js" type="text/javascript" defer></script>
-    <script src="/assets/js/parsley.min.js" type="text/javascript" defer></script>
+    <script src="/assets/js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="/assets/js/parsley.min.js" type="text/javascript"></script>
     {% if page.how_to %}
     <script type="application/ld+json">
       {
@@ -70,7 +70,7 @@
       }
     </script>
     {% endif %}
-    <script>
+    <script defer>
       $(function() {
         $("#api_form").parsley();
 
