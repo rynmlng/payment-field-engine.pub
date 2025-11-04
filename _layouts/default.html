@@ -77,13 +77,18 @@
         $("#api_form").submit(function(e) {
           e.preventDefault();
 
-          const top_level_fields = ["country_code", "payment_field"];
-          let post_data = {params: {}};
+          const api_payment_field = $(this).find('input[name="api_payment_field"]').val();
+          const country_code = $(this).find('input[name="country_code"]').val();
+          const non_param_fields = ["api_payment_field", "country_code", "payment_field"];
+
+          let post_data = {
+            country_code: country_code,
+            payment_field: api_payment_field,
+            params: {}
+          };
 
           for (const element of $(this).serializeArray()) {
-            if (top_level_fields.includes(element.name)) {
-              post_data[element.name] = element.value;
-            } else {
+            if (!non_param_fields.includes(element.name)) {
               post_data.params[element.name] = element.value;
             }
           }
@@ -96,8 +101,9 @@
             data: JSON.stringify(post_data),
             dataType: "json",
             success: function(response) {
-              const label = Object.keys(response)[0];
-              const value = response[label];
+              const api_label = Object.keys(response)[0];
+              const label = $('#api_form input[name="payment_field"]').val();
+              const value = response[api_label];
 
               $("#result").removeClass("error").text(label + ":  " + value);
             },
