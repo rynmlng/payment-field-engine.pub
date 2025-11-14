@@ -17,22 +17,33 @@ $soft-beige: #d9d9d9;
 $warm-sand: #d1a973;
 $white: #ffffff;
 
+$black: #242424;
+$dark-grey: #5c5c5c;
+$light-grey: #e0e0e0;
+$pastel-red: #faa0a0;
+$red: #bb271a;
+$super-light-grey: #f0f0f0;
+$white: #ffffff;
+
 /* overrides */
 body {
-  background-color: $warm-sand;
+  background-color: $white;
   color: $graphite;
   text-align: center;
 }
 
 a {
-  color: $rusty-brown;
+  color: $dark-grey;
   font-weight: bold;
   text-decoration: underline;
 }
 
 footer {
-  a, p {
-    color: $graphite;
+  a {
+    color: $white;
+  }
+  p {
+    color: $light-grey;
   }
 }
 
@@ -67,7 +78,7 @@ ul {
 }
 
 #header_wrap {
-  background: $warm-sand;
+  background: $white;
   position: relative;
   text-align: center;
   .inner {
@@ -86,12 +97,12 @@ ul {
 }
 
 #project_title {
-  color: $rusty-brown;
+  color: $black;
   text-shadow: none;
 }
 
 #project_tagline {
-  color: $rusty-brown;
+  color: $black;
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 0px;
@@ -100,7 +111,9 @@ ul {
 }
 
 #navbar_wrap {
-  background: $light-caramel;
+  background: $white;
+  border-bottom: 2px solid $light-grey;
+  border-top: 4px solid $red;
   color: $rusty-brown;
   ul {
     column-gap: 16px;
@@ -117,8 +130,9 @@ ul {
       padding: 6px 12px;
       text-decoration: none;
       &:hover {
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: $light-grey;
         border-radius: 12px;
+        color: $red;
         text-decoration: none;
       }
     }
@@ -126,14 +140,14 @@ ul {
 }
 
 #main_title {
-  color: $rusty-brown;
+  color: $black;
   display: inline-block;
   margin-top: 40px;
 }
 
 #main_content {
-  background: $warm-sand;
-  color: $rusty-brown;
+  color: $dark-grey;
+  min-height: 250px;
   padding: 0px 10px 40px;
   text-align: center;
   a {
@@ -142,11 +156,15 @@ ul {
       color: $dark-red;
     }
   }
+  #description_only {
+    margin: 40px 0 0 0;
+    white-space: pre-wrap;
+  }
   #main_description {
     margin: 20px 0 0 0;
   }
   #generator {
-    background-color: $white;
+    background-color: $super-light-grey;
     border-radius: 40px;
     margin: 50px auto;
     max-width: 480px;
@@ -174,14 +192,15 @@ ul {
         width: 100%;
       }
       button {
-        background-color: $light-caramel;
+        background-color: $pastel-red;
         border: none;
         border-radius: 24px;
-        color: $eerie-black;
+        color: $black;
         font-weight: bold;
         transition: background-color 0.3s ease-in-out;
         &:hover, &:focus {
-          background-color: $brown-sugar;
+          background-color: $red;
+          color: $light-grey;;
         }
       }
       select {
@@ -216,19 +235,20 @@ ul {
     text-align: left;
     .faq_questions {
       h2 {
-        color: $rusty-brown;
+        color: $black;
         font-size: 21px;
         margin-top: 40px;
       }
       p {
-        color: $rusty-brown;
+        color: $dark-grey;
       }
     }
   }
 }
 
 #footer_wrap {
-  background: $soft-beige;
+  background: $black;
+  border-top: 4px solid $red;
   text-align: left;
 }
 
