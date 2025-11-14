@@ -7,18 +7,9 @@
 $caret-spacing: 1em;
 
 /* colors */
-$brown-sugar: #a66f47;
-$dark-red: #b00020;
-$eerie-black: #1c1c1c;
-$graphite: #1c1c1c;
-$light-caramel: #c68a64;
-$rusty-brown: #7b3f00;
-$soft-beige: #d9d9d9;
-$warm-sand: #d1a973;
-$white: #ffffff;
-
 $black: #242424;
 $dark-grey: #5c5c5c;
+$grey: #aaaaaa;
 $light-grey: #e0e0e0;
 $pastel-red: #faa0a0;
 $red: #bb271a;
@@ -28,7 +19,6 @@ $white: #ffffff;
 /* overrides */
 body {
   background-color: $white;
-  color: $graphite;
   text-align: center;
 }
 
@@ -41,6 +31,10 @@ a {
 footer {
   a {
     color: $white;
+    transition: color 0.5s ease;
+    &:focus, &:hover {
+      color: $grey;
+    }
   }
   p {
     color: $light-grey;
@@ -48,10 +42,6 @@ footer {
 }
 
 h2 { background: none; }
-
-h4 {
-  color: $rusty-brown;
-}
 
 li {
   margin-bottom: 10px;
@@ -114,7 +104,6 @@ ul {
   background: $white;
   border-bottom: 2px solid $light-grey;
   border-top: 4px solid $red;
-  color: $rusty-brown;
   ul {
     column-gap: 16px;
     display: flex;
@@ -154,7 +143,7 @@ ul {
   a {
     transition: color 0.5s ease;
     &:focus, &:hover {
-      color: $dark-red;
+      color: $red;
     }
   }
   #description_only {
@@ -163,6 +152,10 @@ ul {
   }
   #main_description {
     margin: 20px 0 0 0;
+    &.rich-text {
+      text-align: left;
+      white-space: pre-wrap;
+    }
   }
   #generator {
     background-color: $super-light-grey;
@@ -175,7 +168,7 @@ ul {
       padding: 0;
       text-align: left;
       .parsley_error_wrapper {
-        color: $dark-red;
+        color: $red;
         font-size: 14px;
         height: 14px;
         margin-bottom: 21px;
@@ -214,21 +207,21 @@ ul {
       }
     }
     #form_title {
-      color: $eerie-black;
+      color: $black;
       font-size: 32px;
       margin: 21px 0;
     }
     #result {
-      background-color: $warm-sand;
+      background-color: $light-grey;
+      color: $black;
       border-radius: 10px;
-      color: $rusty-brown;
       display: none;
       font-weight: bold;
       margin-top: 35px;
       padding: 12px;
       white-space: pre;
       &.error {
-        color: $dark-red;
+        color: $red;
       }
     }
   }
