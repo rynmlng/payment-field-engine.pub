@@ -1,0 +1,70 @@
+---
+layout: payment_field
+title: CLABE Bank Account Number Generator For Mexico
+description: Instantly generate a valid CLABE for Mexican bank transfers by entering your bank code, branch code, and account number. Our tool ensures your CLABE is accurate for secure Mexican bank transactions.
+
+api_payment_field: clabe
+country_code: MX
+payment_field: CLABE
+form_title: Generate a CLABE for Mexico
+permalink: /mx-clabe/
+
+fields:
+  - name: bank_code
+    type: text
+    label: Enter a bank code
+    max_length: 3
+    parsley_length: '[3,3]'
+    parsley_type: digits
+    pattern: '\d{3}'
+    placeholder: '###'
+    validation_error_message: 'Must be 3 digits.'
+  - name: branch_code
+    type: text
+    label: Enter a branch code
+    max_length: 3
+    parsley_length: '[3,3]'
+    parsley_type: digits
+    pattern: '\d{3}'
+    placeholder: '###'
+    validation_error_message: 'Must be 3 digits.'
+  - name: account_number
+    type: text
+    label: Enter an account number
+    max_length: 11
+    parsley_length: '[11,11]'
+    parsley_type: digits
+    pattern: '\d{11}'
+    placeholder: '###########'
+    validation_error_message: 'Must be 11 digits.'
+
+how_to:
+  enter_bank_details: 'Enter your bank code, branch code, and account number in the respective fields of the form.'
+  form_image:
+    height: 968
+    width: 900
+    link: '/assets/images/forms/mx-clabe.png'
+
+faq_questions:
+  - question: 'What is a CLABE?'
+    answer: 'A CLABE is a standardized 18-digit bank account number used in Mexico. It stands for Clave Bancaria Etandarizada (Standardized Banking Key). A CLABE must be provided to your payment processor for sending and receiving international payments to Mexico.'
+  - question: 'What is the format of a CLABE bank account number?'
+    answer: 'A CLABE bank account number is 18 digits and its format is...<ul><li><strong>Digits 1-3:</strong> Bank Code</li><li><strong>Digits 4-6:</strong> Branch Code</li><li><strong>Digits 7-17:</strong> Account Number</li><li><strong>Digit 18:</strong> Control Digit</li></ul>'
+  - question: 'When do I need to generate a CLABE?'
+    answer: 'You need to generate a CLABE if...<ul><li>You''re sending or receiving a cross-border electronic transfer to a Mexican bank account.</li><li>Your bank or payment provider requests a CLABE for processing a transaction.</li><li>You want to verify the accuracy of a recipient''s account before transferring funds.</li></ul>Use our <a href="/mx-clabe/">CLABE generator tool</a> to instantly create a verified CLABE bank account number.'
+  - question: 'Where can I learn more about CLABEs?'
+    answer: 'See <a href="https://www.supremacorte.gob.mx/sites/default/files/resoluciones/2024-06/CT-CI-A-8-2024.pdf" target="_blank">the official Mexican transparency regulation here.</a><br/><br/>You can also visit our <a href="/mx-clabe/">CLABE generator</a> page for step-by-step instructions and examples.'
+  - question: 'How can I integrate with your API directly?'
+    answer: |
+      Integrating directly with our API is straightforward and entirely open at this time. Here is a snippet of a sample web request you can make:
+      <pre>
+      POST https://payment-field-engine.vigilandum.io/mx-clabe/
+      {
+        "bank_code": "###",
+        "branch_code": "###",
+        "account_number": "###########",
+        "country_code": "MX",
+        "payment_field": "clabe"
+      }
+      </pre>
+---

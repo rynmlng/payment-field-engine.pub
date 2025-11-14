@@ -1,0 +1,62 @@
+---
+layout: payment_field
+title: Routing Number Generator For Canada
+description: Instantly generate a valid Routing Number for Canadian bank transfers by entering your bank code and branch code. Our tool ensures your Routing Number is accurate for secure Canadian bank transactions.
+
+api_payment_field: routing_number
+country_code: CA
+payment_field: Routing Number
+form_title: Generate a Routing Number For Canada
+permalink: /ca-routing-number/
+
+fields:
+  - name: financial_institution_number
+    type: text
+    label: Enter a financial institution number
+    max_length: 3
+    parsley_length: '[1,3]'
+    parsley_type: digits
+    pattern: '\d{1,3}'
+    placeholder: '###'
+    validation_error_message: 'Must be 1-3 digits.'
+  - name: transit_number
+    type: text
+    label: Enter a transit number
+    max_length: 5
+    parsley_length: '[1,5]'
+    parsley_type: digits
+    pattern: '\d{1,5}'
+    placeholder: '#####'
+    validation_error_message: 'Must be 1-5 digits.'
+
+how_to:
+  enter_bank_details: "Enter your financial institution number and transit number in the respective fields of the form."
+  form_image:
+    link: '/assets/images/forms/ca-routing-number.png'
+    height: 894
+    width: 900
+
+faq_questions:
+  - question: 'What is a routing number?'
+    answer: 'A routing number is a standardized numbering system to uniquely identify a specific bank branch for the purpose of processing international payments accurately and efficiently. It contains a financial institution number as well as a transit number to ensure smooth and error-free cross-border transactions.'
+  - question: 'What is the format of a routing number in Canada?'
+    answer: 'A routing number in Canada is 9 digits and its format is...<ul><li><strong>Position 1:</strong> Always 0</li><li><strong>Positions 2-4:</strong> Financial Institution Number</li><li><strong>Positions 5-9:</strong> Transit Number</li></ul>'
+  - question: 'What is special about a routing number in Canada?'
+    answer: 'Every country''s routing number format is different. Canada specifically pads the financial institution number and transit number with a leading 0 to make the routing number compatible with the United States'' American Bankers Association (ABA) routing number system in order to streamline cross-border transactions.'
+  - question: 'When would I need to generate a routing number?'
+    answer: 'You need to generate a routing number for Canada if...<ul><li>You''re sending or receiving a cross-border electronic transfer to a Canadian bank account.</li><li>Your bank or payment provider requests a routing number for processing a transaction.</li><li>You want to verify the accuracy of a recipient''s bank account before transferring funds.</li></ul>User our <a href="/ca-routing-number/">Canada Routing Number generator tool</a> to instantly create a verified routing number.'
+  - question: 'Where can I learn more about routing numbers in Canada?'
+    answer: 'See the official Payments Canada''s Business guide on Wire payments <a href="https://www.payments.ca/payment-resources/support-guides/business-guides/wire-payments">here.</a>'
+  - question: 'How can I integrate with your API directly?'
+    answer: |
+      Integrating directly with our API is straightforward and entirely open at this time. Here is a snippet of a sample web request you can make:
+      <pre>
+      POST https://payment-field-engine.vigilandum.io/ca-routing-number/
+      {
+        "financial_institution_number": "###",
+        "transit_number": "#####"
+        "country_code": "CA",
+        "payment_field": "routing_number"
+      }
+      </pre>
+---

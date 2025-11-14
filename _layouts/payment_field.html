@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<p id="main_description">{{ page.description }}</p>
+<section id="generator">
+  <h2 id="form_title">{{ page.form_title }}</h2>
+  <form id="api_form" data-parsley-validate novalidate>
+    {% for field in page.fields %}
+    <div>
+      <label for="{{field.name}}">{{field.label}}</label>
+      {% case field.type %}
+      {% when "text" %}
+      <input placeholder="{{field.placeholder}}" type="text" id="{{field.name}}" maxlength="{{field.max_length}}" pattern="{{field.pattern}}" name="{{field.name}}" data-parsley-type="{{field.parsley_type}}" data-parsley-length="{{field.parsley_length}}" data-parsley-pattern-message="{{field.validation_error_message}}" data-parsley-errors-container="#{{field.name}}_errors" required />
+      <div class="parsley_error_wrapper" id="{{field.name}}_errors"></div>
+      {% when "select" %}
+      <select id="{{field.name}}" name="{{field.name}}">
+        {% for option in field.options %}
+        <option value="{{option.value}}">{{option.label}}</option>
+        {% endfor %}
+      </select>
+      {% endcase %}
+    </div>
+    {% endfor %}
+    <input name="country_code" type="hidden" value="{{ page.country_code }}"/>
+    <input name="api_payment_field" type="hidden" value="{{ page.api_payment_field }}"/>
+    <input name="payment_field" type="hidden" value="{{ page.payment_field }}"/>
+    <button type="submit">Generate</button>
+  </form>
+  <div id="result"></div>
+</section>
+<section id="faq">
+  {% for faq in page.faq_questions %}
+  <div class="faq_questions">
+    <h2>{{faq.question}}</h2>
+    <p>{{faq.answer}}</p>
+  </div>
+  {% endfor %}
+</section>

@@ -1,0 +1,90 @@
+---
+layout: payment_field
+title: IBAN Generator For Brazil
+description: Instantly generate a valid IBAN for Brazilian bank transfers by entering your account holder position, account number, account type, bank code, and branch code. Our tool ensures your IBAN is accurate for secure Brazilian bank transactions.
+
+api_payment_field: iban
+country_code: BR
+payment_field: IBAN
+form_title: Generate an IBAN for Brazil
+permalink: /br-iban/
+
+fields:
+  - name: bank_code
+    type: text
+    label: Enter a bank code
+    max_length: 3
+    parsley_length: '[1,3]'
+    parsley_type: digits
+    pattern: '\d{1,3}'
+    placeholder: '###'
+    validation_error_message: 'Must be 1-3 digits.'
+  - name: branch_code
+    type: text
+    label: Enter a branch code
+    max_length: 5
+    parsley_length: '[1,5]'
+    parsley_type: digits
+    pattern: '\d{1,5}'
+    placeholder: '#####'
+    validation_error_message: 'Must be 1-5 digits.'
+  - name: account_number
+    type: text
+    label: Enter an account number
+    max_length: 10
+    parsley_length: '[1,10]'
+    parsley_type: digits
+    pattern: '\d{1,10}'
+    placeholder: '##########'
+    validation_error_message: 'Must be 1-10 digits.'
+  - name: account_type
+    label: Enter the account type
+    options:
+      - label: Checking
+        value: checking
+      - label: Savings
+        value: savings
+    type: select
+  - name: account_owner_position
+    label: Enter the account holder's position
+    options:
+      - label: Primary
+        value: 1
+      - label: Secondary
+        value: 2
+    type: select
+
+how_to:
+  enter_bank_details: "Enter your bank code, branch code, account number, account type, and account holder's position in the respective fields of the form."
+  form_image:
+    link: '/assets/images/forms/br-iban.png'
+    height: 1368
+    width: 900
+
+faq_questions:
+  - question: 'What is an IBAN?'
+    answer: 'An IBAN (International Bank Account Number) is a standardized international numbering system used to uniquely identify a specific bank account across national borders for the purpose of processing international payments accurately and efficiently. It contains a country code, check digits, and an account number to ensure smooth and error-free cross-border transactions.'
+  - question: 'What is the format of an IBAN in Brazil?'
+    answer: 'An IBAN in Brazil is 29 digits and its format is...<ul><li><strong>Positions 1-2:</strong> Country Code</li><li><strong>Positions 3-4:</strong> Check Digits</li><li><strong>Positions 5-12:</strong> Bank Code</li><li><strong>Positions 13-17:</strong> Branch Code</li><li><strong>Positions 18-27:</strong> Account Number</li><li><strong>Position 28:</strong> Account Type</li><li><strong>Position 29:</strong> Account Owner Position</li></ul>'
+  - question: 'What is special about an IBAN in Brazil?'
+    answer: 'Every country''s IBAN format is different. Brazil specifically requires a bank identifier with the intermediary Central Bank Of Brazil along with the position of the account holder.'
+  - question: 'When would I need to generate an IBAN?'
+    answer: 'You need to generate an IBAN for Brazil if...<ul><li>You''re sending or receiving a cross-border electronic transfer to a Brazilian bank account.</li><li>Your bank or payment provider requests an IBAN for processing a transaction.</li><li>You want to verify the accuracy of a recipient''s bank account before transferring funds.</li></ul>Use our <a href="/br-iban/">Brazil IBAN generator tool</a> to instantly create a verified IBAN.'
+  - question: 'Where can I learn more about IBANs in Brazil?'
+    answer: 'See the official Central Bank Of Brazil''s IBAN Implementation Guidelines <a href="https://www.bcb.gov.br/content/financialstability/paymentssystem_docs/IBAN-Guidelines_English.pdf">here.</a>'
+  - question: 'How can I integrate with your API directly?'
+    answer: |
+      Integrating directly with our API is straightforward and entirely open at this time. Here is a snippet of a sample web request you can make:
+      <pre>
+      POST https://payment-field-engine.vigilandum.io/br-iban/
+      {
+        "bank_code": "###",
+        "branch_code": "#####",
+        "account_number": "##########",
+        "account_type": "checking",
+        "account_owner_position": "1",
+        "country_code": "BR",
+        "payment_field": "iban"
+      }
+      </pre>
+---
