@@ -161,21 +161,34 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    {% if page.title %}<h1 id="main_title">{{ page.title }}</h1>{% endif %}
-    <section id="main_content" class="inner">
-      {{ content }}
-    </section>
+    <div id="main_wrap" class="outer">
+      {% if page.title %}<h1 id="main_title">{{ page.title }}</h1>{% endif %}
+      <section id="main_content" class="inner">
+        {{ content }}
+      </section>
+    </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p>{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-        <p>Questions? Email me at <a href="mailto:payment-field-engine@vigilandum.io">payment-field-engine@vigilandum.io</a></p>
-        <p><a href="/privacy-policy/">Privacy Policy</a></p>
-        <p><a href="/terms-of-use/">Terms Of Use</a></p>
+        <ul>
+          <li>
+            <p class="title">About</p>
+            <a href="{{ site.github.repository_url }}" class="link">GitHub Readme</a>
+            <a href="{{ site.github.owner_url }}" class="link">Author</a>
+            <a href="mailto:payment-field-engine@vigilandum.io" class="link">Email</a>
+          </li>
+          <li>
+            <p class="title">Legal</p>
+            <a href="/privacy-policy/" class="link">Privacy Policy</a>
+            <a href="/terms-of-use/" class="link">Terms Of Use</a>
+          </li>
+          <li>
+            <p class="title">Trust</p>
+            <a href="https://gdpr.eu/" class="link" target="_blank"><img src="/assets/images/gdpr-compliant-badge.png" class="badge"/></a>
+            <a href="https://privacy.ca.gov/" class="link" target="_blank"><img src="/assets/images/ccpa-compliant-badge.png" class="badge"/></a>
+          </li>
+        </ul>
       </footer>
     </div>
   </body>
