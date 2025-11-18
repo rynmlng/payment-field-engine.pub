@@ -18,4 +18,5 @@ Payment fields outside the US are confusing, seemingly random, yet surprisingly 
 
 * Brazil IBAN
 * Canada Routing Number
+* China CNAPS (Coming Soon)
 * Mexico CLABE

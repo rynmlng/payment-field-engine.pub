@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /br-iban/
+Allow: /ca-routing-number/
 Allow: /mx-clabe/
 Disallow: /
 

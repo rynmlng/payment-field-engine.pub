@@ -4,6 +4,7 @@
 
 ## Important Pages
 - [IBAN Generator For Brazil](https://payment-field-engine.vigilandum.io/br-iban/)
+- [Routing Number Generator For Canada](https://payment-field-engine.vigilandum.io/ca-routing-number/)
 - [CLABE Bank Account Number Generator For Mexico](https://payment-field-engine.vigilandum.io/mx-clabe/)
 
 ## Optional Pages
