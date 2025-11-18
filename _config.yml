@@ -23,6 +23,7 @@ email: sudo@vigilandum.io
 description: Powering Global Payment Details
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://payment-field-engine.vigilandum.io"
+permalink: pretty
 github_username: rynmlng
 author:
   name: "Payment Field Engine"
