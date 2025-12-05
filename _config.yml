@@ -20,7 +20,7 @@
 
 title: Payment Field Engine
 email: sudo@vigilandum.io
-description: Powering Global Payment Details
+description: Generate Global Payment Codes
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://payment-field-engine.vigilandum.io"
 permalink: pretty
