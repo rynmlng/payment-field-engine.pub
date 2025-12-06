@@ -18,15 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Payment Field Engine
-email: sudo@vigilandum.io
-description: Generate Global Payment Codes
+title: Bank Code Tools
+email: bankcode.tools@vigilandum.io
+description: Generate Global Payment Bank Codes
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://payment-field-engine.vigilandum.io"
+url: "https://bankcode.tools"
 permalink: pretty
 github_username: rynmlng
 author:
-  name: "Payment Field Engine"
+  name: "Bank Code Tools"
 
 # Build settings
 theme: jekyll-theme-slate
